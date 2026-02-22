@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+
+ul.timeline li::marker{
+    color: #F7DF1E; /* color del punto */
+    font-size: 1.2em; /* tamaño opcional */
+}
+
+
+.timeline-list{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    unicode-bidi: isolate;
+    padding-inline-start: 43px;
+}
+
+.timeline-item{
+    display: list-item;
+    unicode-bidi: isolate;
+}
+
+.timeline-item:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.timeline-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -30px;
+    width: 1px;
+    height: calc(100% + 50px);
+    background: hsl(0, 0%, 22%);
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -33px;
+    height: 6px;
+    width: 6px;
+    background: linear-gradient(to right, #F7DF1E, #F7DF1E);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px hsl(0, 0%, 22%);
+}
+
+.icon-box::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: hsl(240, 2%, 13%);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.h4{
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.timeline-item-title {
+    font-size: var(--fs-5);
+    line-height: 1.3;
+    margin-bottom: 7px;
+}
+
+.timeline-text{
+    color: hsl(0, 0%, 84%);
+    font-weight: 300;
+    line-height: 1.6;
+}

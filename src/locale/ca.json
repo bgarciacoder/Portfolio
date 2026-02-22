@@ -1,0 +1,28 @@
+{
+    "translation": {
+        "translationText": "Tria el teu idioma preferit al meu lloc web per a una millor experiència.",
+        "mainTitle": "Hola! Sóc en Bryan, un desenvolupador Full Stack apassionat especialitzat en la creació d'aplicacions web dinàmiques i escalables.",
+        "subTitle": "Sóc un desenvolupador Full Stack especialitzat en Angular, React i Node.js, apassionat per crear aplicacions web dinàmiques i escalables.", 
+        "downloadCv": "Descarregar CV", 
+        "projectsTitle": "Projectes destacats", 
+        "contactTitle": "Contacta'm", 
+        "contactText": "Potser vols contactar-me, no dubtis a enviar-me un correu electrònic o contactar-me a les meves xarxes socials.", 
+        "contactButton": "Anar al formulari de contacte", 
+        "contactFormTitle": "Contacta amb mi", 
+        "contactName": "Nom", 
+        "contactNamePlaceholder": "Introdueix el teu nom", 
+        "contactEmail": "Correu electrònic", 
+        "contactEmailPlaceholder": "Introdueix la teva adreça de correu electrònic", 
+        "contactMessage": "Missatge", 
+        "contactSubmit": "Enviar", 
+        "developedBy": "Desenvolupat per Bryan", 
+        "experienceTitle": "Experiència", 
+        "educationTitle": "Educació", 
+        "skillsTitle": "Les meves habilitats", 
+        "nav": { 
+            "home": "Inici", 
+            "resume": "Currículum", 
+            "contact": "Contacte" 
+        }
+    }
+}

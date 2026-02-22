@@ -1,0 +1,28 @@
+{
+    "translation": {
+        "translationText": "Elige tu idioma preferido en mi sitio web para una mejor experiencia.",
+        "mainTitle": "¡Hola! Soy Bryan, un apasionado desarrollador Full Stack especializado en la creación de aplicaciones web dinámicas y escalables.",
+        "subTitle": "soy un desarrollador Full Stack especializado en Angular, React y Node.js, apasionado por crear aplicaciones web dinámicas y escalables.",
+        "downloadCv": "Descargar CV",
+        "projectsTitle": "Proyectos destacados",
+        "contactTitle": "Contáctame",
+        "contactText": "Quizás quieras contactarme, no dudes en enviarme un correo electrónico o contactarme en mis redes sociales.",
+        "contactButton": "Ir al formulario de contacto",
+        "contactFormTitle": "Contacta conmigo",
+        "contactName": "Nombre",
+        "contactNamePlaceholder": "Ingresa tu nombre",
+        "contactEmail": "Correo electrónico",
+        "contactEmailPlaceholder": "Ingresa tu dirección de correo electrónico",
+        "contactMessage": "Mensaje",
+        "contactSubmit": "Enviar",
+        "developedBy": "Desarrollado por Bryan",
+        "experienceTitle": "Experiencia", 
+        "educationTitle": "Educación", 
+        "skillsTitle": "Mis habilidades",
+        "nav": { 
+            "home": "Inicio", 
+            "resume": "Currículum", 
+            "contact": "Contacto" 
+        }
+    }
+}
