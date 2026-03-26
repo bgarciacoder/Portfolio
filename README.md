@@ -1,5 +1,5 @@
 
-# Portafolio
+# Portfolio
 
 Este repositorio contiene el código fuente de mi portfolio personal desarrollado en React.
 
