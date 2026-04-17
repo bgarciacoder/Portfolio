@@ -42,19 +42,19 @@ export const HomePage = () => {
                     <img src="image/profile.jpg" alt="Personal image by Bryan García" className='w-full rounded-md' />
                     <ul className="mt-3 flex list-none flex-col gap-3">
                     <li>
-                        <a href="" className="flex items-center gap-2 text-[12px]">
+                        <a href={`mailto:${MAIL}`} className="flex items-center gap-2 text-[12px]">
                             <Mail size={12} />
                             <span>{MAIL}</span>
                         </a>
                     </li>
                     <li>
-                        <a href="" className="flex items-center gap-2 text-[12px]">
+                        <a href="https://github.com/bgarciacoder" target='_blank' className="flex items-center gap-2 text-[12px]">
                             <Github size={12} />
                             <span>Github</span>
                         </a>
                     </li>
                     <li>
-                        <a href="" className="flex items-center gap-2 text-[12px]">
+                        <a href="https://www.linkedin.com/in/bryan-garc%C3%ADa-994b283ab/" target='_blank' className="flex items-center gap-2 text-[12px]">
                             <Linkedin size={12} />
                             <span>Linkedin</span>
                         </a>
@@ -92,44 +92,41 @@ export const HomePage = () => {
                 <div className="mt-5 grid grid-cols-1 gap-6 rounded border px-3 py-5 md:grid-cols-2">
                     {/* Columna izquierda */}
                     <div className="flex flex-col gap-3">
-                        <div className="flex gap-3">
-                            <a
-                                href=""
+                        <a href={`mailto:${MAIL}`} className="flex gap-3">
+                            <div
                                 className="flex h-12 w-12 items-center justify-center rounded-full border"
                             >
                                 <Mail size={16} />
-                            </a>
+                            </div>
                             <div>
                                 <span className="block text-sm font-medium">Email</span>
                                 <p className="m-0 text-sm">{MAIL}</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="flex gap-3">
-                            <Link
-                                to="https://www.linkedin.com/in/bryan-garc%C3%ADa-994b283ab/"
+                        <a href="https://www.linkedin.com/in/bryan-garc%C3%ADa-994b283ab/" target='_blank' className="flex gap-3">
+                            <div
                                 className="flex h-12 w-12 items-center justify-center rounded-full border"
                             >
                                 <Linkedin size={16} />
-                            </Link>
+                            </div>
                             <div>
                                 <span className="block text-sm font-medium">Linkedin</span>
                                 <p className="m-0 text-sm">Bryan García</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="flex gap-3">
-                            <Link
-                                to="https://github.com/BGarciaCoder"
+                        <a href="https://github.com/BGarciaCoder" target='_blank' className="flex gap-3">
+                            <div
                                 className="flex h-12 w-12 items-center justify-center rounded-full border"
                             >
                                 <Github size={16} />
-                            </Link>
+                            </div>
                             <div>
                                 <span className="block text-sm font-medium">Github</span>
                                 <p className="m-0 text-sm">BGarciaCoder</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     {/* Columna derecha */}

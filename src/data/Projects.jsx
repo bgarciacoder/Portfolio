@@ -33,5 +33,21 @@ export const projects = [
         technologys: 'PHP, Wordpress, MySQL, JavaScript, HTML, CSS',
         link: 'https://infinituniformes.com/'
     },
-    
+    {
+        id: 3,
+        date: {
+            en: "January 2026 - April 2026",
+            es: "Enero 2026 - Abril 2026",
+            ca: "Gener 2026 - Abril 2026"
+        },
+        description: {
+            en: 'Development of an application with React and Node.js. The web was created as a personal learning project and AI testing to help with faster and more efficient development.',
+            es: "Desarrollo de aplicación con React y Node.js. La web se realizó como aprendizaje personal y testeo de IA para ayudar con un desarrollo mas rápido y eficiente. ",
+            ca: "Desenvolupament d'una aplicació amb React i Node.js. La web es va realitzar com a aprenentatge personal i test de IA per ajudar amb un desenvolupament més ràpid i eficient."
+        },
+        position: 'REACT DEVELOPER',
+        company: 'ME PERSONAL PROJECT',
+        technologys: 'React, Node.js, MongoDB, JavaScript, HTML, CSS, Tailwind',
+        link: 'https://ani-vault-delta.vercel.app/'
+    },
 ];
