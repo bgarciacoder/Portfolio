@@ -31,7 +31,16 @@ export const projects = [
         position: 'FULL STACK DEVELOPER',
         company: 'INFINIT',
         technologys: 'PHP, Wordpress, MySQL, JavaScript, HTML, CSS',
-        link: 'https://infinituniformes.com/'
+        technologyIcons: [
+            'image/php.png',
+            'image/wordpress.png',
+            'image/mysql.png',
+            'image/js.png',
+            'image/html.png',
+            'image/css.png'
+        ],
+        link: 'https://infinituniformes.com/',
+        image: 'image/infinituniformes.png'
     },
     {
         id: 3,
@@ -47,7 +56,17 @@ export const projects = [
         },
         position: 'REACT DEVELOPER',
         company: 'ME PERSONAL PROJECT',
-        technologys: 'React, Node.js, MongoDB, JavaScript, HTML, CSS, Tailwind',
-        link: 'https://ani-vault-delta.vercel.app/'
+        technologys: "React, Node.js, MongoDb, Tailwind, JavaScript, HTML, CSS",
+        technologyIcons: [
+            'image/react.png',
+            'image/node.png',
+            'image/mongo.png',
+            'image/tailwind.png',
+            'image/js.png',
+            'image/html.png',
+            'image/css.png'
+        ],
+        link: 'https://ani-vault-delta.vercel.app/',
+        image: 'image/anivault.png'
     },
 ];

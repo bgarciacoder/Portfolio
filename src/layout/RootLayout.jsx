@@ -11,7 +11,7 @@ export const RootLayout = () => {
         <div className="bg-black flex flex-col min-h-screen text-white">
             <Navbar t={t} />
 
-            <main className="mt-15 flex-1 text-white w-full md:w-4xl mx-auto px-5 flex flex-col gap-15 py-[50px]">
+            <main className="mt-15 flex-1 text-white w-full md:w-4xl mx-auto px-5 flex flex-col gap-12 py-[50px]">
                 <Outlet />
             </main>
 

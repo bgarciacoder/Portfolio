@@ -18,15 +18,15 @@ export const Navbar = ({ t }) => {
                     <LanguageSwitcher />
                 </div>
             </section>
-            <section className="mx-auto flex flex-row justify-between px-5 w-full md:w-4xl">
-                <div className="flex flex-col py-2">
+            <section className="mx-auto flex flex-row justify-center px-5 py-5 w-full md:w-4xl">
+                {/* <div className="flex flex-col py-2">
                     <span className="text-[16px] font-semibold text-white">
                         Bryan García
                     </span>
                     <span className="text-[10px] text-[#F7DF1E]">
                         Full Stack Developer
                     </span>
-                </div>
+                </div> */}
 
                 {/* Botón menú móvil */}
                 <button

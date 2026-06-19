@@ -25,10 +25,10 @@ export const HomePage = () => {
     return (
         <>
             <section className="flex flex-col md:flex-row mt-[50px]">
-                <div className='w-full md:w-[70%] pr-5'>
+                <div className='w-full md:w-[70%] pr-[7rem]'>
                     <h1 className="text-[2rem] leading-[2.3rem]">{t('mainTitle')}</h1>
-                    <p>{t('subTitle')}</p>
-                    <div className="mt-5">
+                    <p className="text-[1rem] text-gray-300 mt-5">{t('subTitle')}</p>
+                    <div className="mt-10">
                         <button
                             onClick={onClickDownloadPdf}
                             className="flex items-center justify-center rounded-md bg-[#F7DF1E] px-4 py-2 text-black font-bold border border-[#F7DF1E] hover:opacity-90 transition cursor-pointer"
@@ -37,29 +37,54 @@ export const HomePage = () => {
                             <span className="px-2">{t('downloadCv')}</span>
                         </button>
                     </div>
+                    <div className="mt-5 flex gap-3">
+                        <div
+                            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#3d3d3d] cursor-pointer"
+                        >
+                            <img src="image/mail.png" className="h-6 w-6" alt="Logotype from gmail" />
+                        </div>
+                        <div
+                            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#3d3d3d] cursor-pointer"
+                        >
+                            <img src="image/linkedin.png" className="h-6 w-6" alt="Logotype from linkedin" />
+                        </div>
+                        <div
+                            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#3d3d3d] cursor-pointer"
+                        >
+                            <img src="image/github.png" className="h-6 w-6" alt="Logotype from github" />
+                        </div>
+                    </div>
                 </div>
                 <div className='w-full md:w-[30%] mt-7 md:mt-0'>
-                    <img src="image/profile.jpg" alt="Personal image by Bryan García" className='w-full rounded-md' />
-                    <ul className="mt-3 flex list-none flex-col gap-3">
-                    <li>
-                        <a href={`mailto:${MAIL}`} className="flex items-center gap-2 text-[12px]">
-                            <Mail size={12} />
-                            <span>{MAIL}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/bgarciacoder" target='_blank' className="flex items-center gap-2 text-[12px]">
-                            <Github size={12} />
-                            <span>Github</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/bryan-garc%C3%ADa-994b283ab/" target='_blank' className="flex items-center gap-2 text-[12px]">
-                            <Linkedin size={12} />
-                            <span>Linkedin</span>
-                        </a>
-                    </li>
-                </ul>
+                    <img src="image/profile.jpg" alt="Personal image by Bryan García" className='w-full rounded-md border border-[#3d3d3d]' />
+                    <div className="flex flex-col items-center pt-7">
+                        <span className="text-[16px] font-semibold text-white">
+                            Bryan García
+                        </span>
+                        <span className="text-[10px] text-[#F7DF1E]">
+                            Full Stack Developer
+                        </span>
+                    </div>
+                    {/* <ul className="mt-3 flex list-none flex-col gap-3">
+                        <li>
+                            <a href={`mailto:${MAIL}`} className="flex items-center gap-2 text-[12px]">
+                                <Mail size={12} />
+                                <span>{MAIL}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/bgarciacoder" target='_blank' className="flex items-center gap-2 text-[12px]">
+                                <Github size={12} />
+                                <span>Github</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/bryan-garc%C3%ADa-994b283ab/" target='_blank' className="flex items-center gap-2 text-[12px]">
+                                <Linkedin size={12} />
+                                <span>Linkedin</span>
+                            </a>
+                        </li>
+                    </ul> */}
                 </div>
             </section>
             <section>
@@ -69,16 +94,23 @@ export const HomePage = () => {
                 </div>
                 <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-3 auto-rows-fr">
                     {
-                        projects.map(({ id, date, description, position, company, technologys, link }) => (
+                        projects.map(({ id, date, description, position, company, technologys, technologyIcons, link, image }) => (
                             <Link key={id} to={link} className='flex flex-col gap-1 px-3 border-l border-l-yellow-300'>
+                                <img src={image} alt={company} className='w-full h-auto rounded mb-3 border border-[#3d3d3d]' />
                                 <div className='flex justify-between'>
                                     <small className='text-[#0d6efd] text-[.875em]'>{date[lang]}</small>
                                     <MoveUpRight size={16} className='text-[#F7DF1E]' />
                                 </div>
                                 <span className='text-[1.5rem] font-bold'>{position}</span>
                                 <span className='text-[1rem] font-bold'>{company}</span>
-                                <span className='text-[.875em]'>{description[lang]}</span>
-                                <span className='text-[.875em] flex flex-row items-center'><ChevronLeft /> {technologys} <ChevronRight /></span>
+                                <span className='text-[.875em] mb-5'>{description[lang]}</span>
+                                <span className='text-[.875em] flex flex-row items-center gap-2 mt-auto'>
+                                    {
+                                        technologyIcons.map((icon, index) => (
+                                            <img key={index} src={icon} alt={icon} className='w-10 h-10 mx-1' />
+                                        ))
+                                    }
+                                </span>
                             </Link>
                         ))
                     }
@@ -89,14 +121,14 @@ export const HomePage = () => {
                     <SquareUserRound size={ICON_SIZE} />
                     <h1>{t('contactTitle')}</h1>
                 </div>
-                <div className="mt-5 grid grid-cols-1 gap-6 rounded border px-3 py-5 md:grid-cols-2">
+                <div className="mt-5 grid grid-cols-1 gap-6 rounded border border-[#3d3d3d] px-3 py-5 md:grid-cols-2">
                     {/* Columna izquierda */}
                     <div className="flex flex-col gap-3">
                         <a href={`mailto:${MAIL}`} className="flex gap-3">
                             <div
-                                className="flex h-12 w-12 items-center justify-center rounded-full border"
+                                className="flex h-12 w-12 items-center justify-center rounded-full border border-[#3d3d3d]"
                             >
-                                <Mail size={16} />
+                                <img src="image/mail.png" className="h-6 w-6" alt="Logotype from gmail" />
                             </div>
                             <div>
                                 <span className="block text-sm font-medium">Email</span>
@@ -106,9 +138,9 @@ export const HomePage = () => {
 
                         <a href="https://www.linkedin.com/in/bryan-garc%C3%ADa-994b283ab/" target='_blank' className="flex gap-3">
                             <div
-                                className="flex h-12 w-12 items-center justify-center rounded-full border"
+                                className="flex h-12 w-12 items-center justify-center rounded-full border border-[#3d3d3d]"
                             >
-                                <Linkedin size={16} />
+                                <img src="image/linkedin.png" className="h-6 w-6" alt="Logotype from linkedin" />
                             </div>
                             <div>
                                 <span className="block text-sm font-medium">Linkedin</span>
@@ -118,9 +150,9 @@ export const HomePage = () => {
 
                         <a href="https://github.com/BGarciaCoder" target='_blank' className="flex gap-3">
                             <div
-                                className="flex h-12 w-12 items-center justify-center rounded-full border"
+                                className="flex h-12 w-12 items-center justify-center rounded-full border border-[#3d3d3d]"
                             >
-                                <Github size={16} />
+                                <img src="image/github.png" className="h-6 w-6" alt="Logotype from github" />
                             </div>
                             <div>
                                 <span className="block text-sm font-medium">Github</span>
@@ -137,7 +169,7 @@ export const HomePage = () => {
 
                         <Link
                             to="/contact"
-                            className="contact-btn flex items-center justify-center gap-2 text-center border rounded px-4 py-2"
+                            className="contact-btn flex items-center justify-center gap-2 text-center border border-[#3d3d3d] rounded px-4 py-2"
                         >
                             {t('contactButton')}
                             <CircleChevronRight />
