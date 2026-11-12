@@ -10,7 +10,7 @@ React
 Tailwind CSS
 Backend ligero en PHP
 
-El desarrollo de la web se ha realizado principalmente a partir de conocimientos propios, complementados con el uso puntual de herramientas de IA (Vibe Coding) para pruebas y validación de funcionalidades.
+El desarrollo de la web se ha realizado principalmente a partir de conocimientos propios, complementados con el uso puntual de herramientas de IA.
 
 Objetivo
 
